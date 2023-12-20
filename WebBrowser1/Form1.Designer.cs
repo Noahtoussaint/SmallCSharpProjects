@@ -31,6 +31,7 @@ namespace WebBrowser1
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.btnBack = new System.Windows.Forms.ToolStripButton();
@@ -39,6 +40,7 @@ namespace WebBrowser1
 			this.cboLocation = new System.Windows.Forms.ToolStripComboBox();
 			this.btnGo = new System.Windows.Forms.ToolStripButton();
 			this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -53,7 +55,7 @@ namespace WebBrowser1
             this.btnGo});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(800, 34);
+			this.toolStrip1.Size = new System.Drawing.Size(800, 38);
 			this.toolStrip1.TabIndex = 0;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -63,7 +65,7 @@ namespace WebBrowser1
 			this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
 			this.btnBack.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnBack.Name = "btnBack";
-			this.btnBack.Size = new System.Drawing.Size(52, 29);
+			this.btnBack.Size = new System.Drawing.Size(52, 33);
 			this.btnBack.Text = "Back";
 			this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
 			// 
@@ -73,19 +75,19 @@ namespace WebBrowser1
 			this.btnForward.Image = ((System.Drawing.Image)(resources.GetObject("btnForward.Image")));
 			this.btnForward.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnForward.Name = "btnForward";
-			this.btnForward.Size = new System.Drawing.Size(81, 29);
+			this.btnForward.Size = new System.Drawing.Size(81, 33);
 			this.btnForward.Text = "Forward";
 			this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
 			// 
 			// cboLocation
 			// 
 			this.cboLocation.Name = "cboLocation";
-			this.cboLocation.Size = new System.Drawing.Size(121, 34);
+			this.cboLocation.Size = new System.Drawing.Size(121, 38);
 			this.cboLocation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboLocation_KeyDown);
 			// 
 			// btnGo
@@ -94,28 +96,36 @@ namespace WebBrowser1
 			this.btnGo.Image = ((System.Drawing.Image)(resources.GetObject("btnGo.Image")));
 			this.btnGo.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnGo.Name = "btnGo";
-			this.btnGo.Size = new System.Drawing.Size(39, 29);
+			this.btnGo.Size = new System.Drawing.Size(39, 33);
 			this.btnGo.Text = "Go";
 			this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
 			// 
 			// webBrowser1
 			// 
+			this.webBrowser1.ContextMenuStrip = this.contextMenuStrip1;
 			this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.webBrowser1.Location = new System.Drawing.Point(0, 34);
+			this.webBrowser1.IsWebBrowserContextMenuEnabled = false;
+			this.webBrowser1.Location = new System.Drawing.Point(0, 38);
 			this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
 			this.webBrowser1.Name = "webBrowser1";
-			this.webBrowser1.Size = new System.Drawing.Size(800, 416);
+			this.webBrowser1.Size = new System.Drawing.Size(800, 412);
 			this.webBrowser1.TabIndex = 1;
 			// 
-			// frmMain
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+			// 
+			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Controls.Add(this.webBrowser1);
 			this.Controls.Add(this.toolStrip1);
-			this.Name = "frmMain";
-			this.Text = "Ssilver";
+			this.Name = "Form1";
+			this.Text = "silver/";
 			this.Load += new System.EventHandler(this.frmMain_Load);
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
@@ -153,6 +163,7 @@ namespace WebBrowser1
 		private System.Windows.Forms.ToolStripComboBox cboLocation;
 		private System.Windows.Forms.ToolStripButton btnGo;
 		private System.Windows.Forms.WebBrowser webBrowser1;
+		private ContextMenuStrip contextMenuStrip1;
 	}
 }
 
